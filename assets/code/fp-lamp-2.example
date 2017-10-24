@@ -1,0 +1,8 @@
+const toggleStatus = (lamp) => {
+  return {
+    ...lamp, 
+    isOn: !lamp.isOn
+  }
+}
+
+const lampStatus = (lamp) => lamp.isOn ? 'on' : 'off'

@@ -1,0 +1,12 @@
+// hey SO, how do I Convert a Unix timestamp to time in JavaScript
+
+function convertTime(date, separator) {
+   var pad = function(input) {return input < 10 ? "0" + input : input;};
+   return [
+       pad(date.getHours()),
+       pad(date.getMinutes()),
+       pad(date.getSeconds())
+   ].join(typeof separator !== 'undefined' ?  separator : ':' );
+}
+
+console.log(convertTime(new Date()))

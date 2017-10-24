@@ -1,0 +1,16 @@
+class Lamp {
+  constructor(isOn = false) {
+    this.isOn = isOn
+  }
+
+  toggleStatus() {
+    this.isOn = !this.isOn
+  }
+  
+  getStatus() {
+     return this.isOn ? 'on' : 'off'
+  }
+}
+
+const lamp = new Lamp()
+lamp.toggleStatus()

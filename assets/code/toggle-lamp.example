@@ -1,0 +1,9 @@
+const lamp = new Lamp()
+
+lamp.toggleStatus()
+console.log(`The lamp is now ${lamp.getStatus()}`) // on
+
+lamp.toggleStatus()
+console.log(`The lamp is now ${lamp.getStatus()}`) // off
+
+// https://jsbin.com/wujejeq/

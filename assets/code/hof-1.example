@@ -1,0 +1,7 @@
+// dom
+<button id="open">Open Me</button>
+
+// js
+$("#open").on("click", function() {
+  alert("you triggered " + this.id);
+});

@@ -1,0 +1,4 @@
+// typical interview question
+// write a sum function that has this signature
+
+sum(20)(30) == 50

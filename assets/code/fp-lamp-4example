@@ -1,0 +1,16 @@
+const toggleStatus = (lamp) => {
+  return {
+    ...lamp, 
+    isOn: !lamp.isOn
+  }
+}
+
+const lampStatus = (lamp) => lamp.isOn ? 'on' : 'off'
+
+const lamp = { isOn: false }
+console.log(`lamp is now ${lampStatus(lamp)}`)
+
+const newLamp = toggleStatus(lamp) // <-- we send the old lamp in and new lamp comes out
+console.log(`lamp is now ${lampStatus(newLamp)}`)
+
+https://jsbin.com/hawaqap

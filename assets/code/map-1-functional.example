@@ -1,0 +1,9 @@
+const incrementAge = (collection, coffeeLovers) => {
+  return collection.map((person) => {
+    person.coffeeLover = coffeeLovers.includes(person.name);
+ 
+    return person;
+  });
+};
+
+addCoffeeLoverValue(people, coffeeLovers) // 

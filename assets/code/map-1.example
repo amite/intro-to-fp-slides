@@ -1,0 +1,11 @@
+const people = [
+ { name: ‘John Doe’, age: 16 },
+ { name: ‘Thomas Calls’, age: 19 },
+ { name: ‘Liam Smith’, age: 20 },
+ { name: ‘Jessy Pinkman’, age: 18 },
+];
+
+const coffeeLovers = [‘John Doe’, ‘Liam Smith’, ‘Jessy Pinkman’];
+
+// select people who love drinking coffee
+// example via https://medium.freecodecamp.org/higher-order-functions-in-javascript-d9101f9cf528

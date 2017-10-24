@@ -1,0 +1,32 @@
+/**
+ * The Array Party https://jsbin.com/piqega
+ */ 
+let ArrayParty = (function() {
+  console.log("- - - ArrayParty");
+  
+  let defaultMenu = ['hamburger', 'french fries', 'soda']
+  let guestNames = ['John', 'Jane', 'Bill'];
+  
+  let guest = name => ({
+    name,
+    foods: defaultMenu,
+    eat(food) {
+      this.foods.push(food); 
+      return this;
+    }
+  });
+  let guests = guestNames.map(guest)
+  
+  // -- 
+
+  let [john, jane, bill] = guests;
+  
+  john.eat('salad');
+  jane.eat('chips and salsa');
+  bill.eat('twinkies').eat('ribs').eat('hot dog');
+
+  guests.forEach(guest => console.log(
+    `${guest.name} ate: ` + guest.foods.join(', ')));
+});
+
+ArrayParty();

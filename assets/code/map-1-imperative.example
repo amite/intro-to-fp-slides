@@ -1,0 +1,18 @@
+const addCoffeeLoverValue = (collection) => {
+  const results = [];
+ 
+  for (let i = 0; i < collection.length; i++) {
+    const person = collection[i];
+    if (coffeeLovers.includes(person.name)) {
+      person.coffeeLover = true;
+    } else {
+      person.coffeeLover = false;
+    }
+ 
+    results.push(person);
+  }
+ 
+  return results;
+};
+
+addCoffeeLoverValue(people) // 

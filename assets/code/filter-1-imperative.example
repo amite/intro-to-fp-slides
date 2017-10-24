@@ -1,0 +1,12 @@
+const peopleAbove18 = (collection) => {
+  const results = [];
+ 
+  for (let i = 0; i < collection.length; i++) {
+    const person = collection[i];
+ 
+    if (person.age >= 18) {
+      results.push(person);
+    }
+  }
+  return results;
+};

@@ -1,0 +1,4 @@
+const peopleAbove18 = (collection) => {
+  return collection
+    .filter((person) => person.age >= 18);
+}

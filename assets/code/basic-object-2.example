@@ -1,0 +1,7 @@
+class Lamp {
+  constructor(isOn = false) {
+    this.isOn = isOn
+  }
+}
+
+const lamp = new Lamp()

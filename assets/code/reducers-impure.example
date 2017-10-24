@@ -1,0 +1,7 @@
+case 'TOGGLE_TODO':
+      //...
+      state.completed = !state.completed; //change original object
+      return state;
+default: ...
+
+// https://medium.freecodecamp.org/why-redux-needs-reducers-to-be-pure-functions-d438c58ae468

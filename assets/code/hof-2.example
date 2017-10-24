@@ -1,0 +1,22 @@
+function successCallback() {
+    // Do stuff before send​
+}
+​
+​function successCallback() {
+    // Do stuff if success message received​
+}
+​
+​function completeCallback() {
+    // Do stuff upon completion​
+}
+​
+​function errorCallback() {
+    // Do stuff if error received​
+}
+​
+$.ajax({
+    url:"http://getCatPics.com/data.json",
+    success:successCallback,
+    complete:completeCallback,
+    error:errorCallback
+});
