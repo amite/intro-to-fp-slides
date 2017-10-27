@@ -1,0 +1,19 @@
+// our Temperature class that controls state
+
+class Temperature {
+  constructor (value) {
+    this.value = value
+  }
+  
+  turnUp(tempVal) {
+    this.value += tempVal
+  }
+  
+  turnDown(tempVal) {
+    this.value -= tempVal
+  }
+  
+  get temp() {
+    return this.value
+  }
+}

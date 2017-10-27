@@ -1,0 +1,2 @@
+const roomThermostat = new RoomThermostat(tempControl)
+const kitchenOven = new Oven(tempControl)

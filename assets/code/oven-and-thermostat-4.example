@@ -1,0 +1,18 @@
+class RoomThermostat {
+  constructor(tempControl) {
+    this.tempControl = tempControl;
+  }
+  
+   coolDown(val) {
+    this.tempControl.turnDown(val)
+  }
+  
+  warmUp(val) {
+    this.tempControl.turnUp(val)
+  }
+  
+  get temp() {
+    return this.tempControl.temp
+  }
+  
+}

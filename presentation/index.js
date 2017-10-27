@@ -212,8 +212,112 @@ export default class Presentation extends React.Component {
           bgDarken={0.5}
           textColor="tertiary"
         >
+          <Heading size={1} textColor="primary" caps>
+            What problems does Functional Programming (FP) solve?
+          </Heading>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+            Here are the problems FP solves for me
+          </Heading>
+          <List textAlign="center">
+            <Appear>
+              <ListItem>
+                breaks down large problems into smaller problems
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                reduces complexity in my software. Let’s me write succinct and
+                clear code
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                allows me to scale complex requirements without having to write
+                redundant abstractions or spaghetti code.
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>makes adding things easier.</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Changing things also becomes easier</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={3} caps lineHeight={1} textColor="tertiary">
+            more...
+          </Heading>
+          <List textAlign="center">
+            <Appear>
+              <ListItem>
+                Purity of functions and immutability of data makes managing
+                state predictable in my apps
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                makes concurrent programming more plausible. No race conditions
+                or mutexes to manage. I am always writing thread safe code
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                reduces complexity in my software. Let’s me write succinct and
+                clear code
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                allows me to scale complex requirements without having to write
+                redundant abstractions or spaghetti code.{" "}
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Code runs really well on multi-core CPU's and GPU's
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={3} caps lineHeight={1} textColor="tertiary">
+            ...and finally
+          </Heading>
+          <List textAlign="center">
+            <Appear>
+              <ListItem>
+                FP trains me to look at coding problems through a mathematical
+                lens. This makes my code behave according to certain fundamental
+                mathematical laws, which gives me more confidence because my
+                programs become more verifiable this reduces the number of tests
+                I have to write
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                I understand the React and redux ecosystem much better from an
+                FP perspective
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                I can use more powerful component patterns in React and redux
+                because of a stronger understanding of FP
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide
+          transition={["fade"]}
+          bgImage={"https://source.unsplash.com/5qu_01uVW7k/1200x900"}
+          bgDarken={0.5}
+          textColor="tertiary"
+        >
           <Heading size={1} textColor="tertiary" caps fit>
-            Why should I bother?
+            Why should You bother?
           </Heading>
           <Appear>
             <Heading size={3} textColor="primary" caps fit>
@@ -549,10 +653,10 @@ export default class Presentation extends React.Component {
               <ListItem>Objects are alive (unpredictable)</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Data is inert (Predictable)</ListItem>
+              <ListItem>Data is append only</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Data can't do anything without functions</ListItem>
+              <ListItem>Data is inert (Predictable)</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -581,9 +685,29 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
 
+        <Slide
+          transition={["fade"]}
+          bgImage={"https://source.unsplash.com/b3hdazGhWPI/1200x900"}
+          bgDarken={0.5}
+          textColor="tertiary"
+        >
+          <Heading size={3} textColor="primary" caps fit>
+            immutability
+          </Heading>
+          <Text margin="10px 0 0" textColor="tertiary" size={1} fit caps>
+            Why it matters
+          </Text>
+        </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={5} fit caps lineHeight={1} textColor="secondary">
-            Immutability
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="secondary"
+            margin="30px auto"
+          >
+            Mutation means Change
           </Heading>
           <Appear>
             <Heading
@@ -629,8 +753,9 @@ export default class Presentation extends React.Component {
             ...Let's look at a mutable state bug
           </Heading>
           <CodePane
+            textSize="22px"
             lang="jsx"
-            source={require("raw-loader!../assets/code/mutable-state-bug.example")}
+            source={require("raw-loader!../assets/code/oven-and-thermostat-1.example")}
           />
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
@@ -642,26 +767,174 @@ export default class Presentation extends React.Component {
             textColor="tertiary"
             margin="30px auto"
           >
-            And here is the fix
+            Temperature class
+          </Heading>
+          <CodePane
+            textSize="22px"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/oven-and-thermostat-2.example")}
+          />
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            Oven with tempControl
+          </Heading>
+          <CodePane
+            textSize="22px"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/oven-and-thermostat-3.example")}
+          />
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            Room Thermostat with tempControl
           </Heading>
           <CodePane
             lang="jsx"
-            source={require("raw-loader!../assets/code/mutable-state-bug.example")}
+            textSize="22px"
+            source={require("raw-loader!../assets/code/oven-and-thermostat-4.example")}
           />
         </Slide>
-        <Slide transition={["zoom"]} bgColor="secondary">
-          <Heading size={3} fit lineHeight={1} textColor="quartenary">
-            What is an Immutable data structure?
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            Instantiate
+          </Heading>
+          <CodePane
+            lang="jsx"
+            textSize="22px"
+            source={require("raw-loader!../assets/code/oven-and-thermostat-5.example")}
+          />
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            Heat up the Oven
+          </Heading>
+          <CodePane
+            lang="jsx"
+            textSize="22px"
+            source={require("raw-loader!../assets/code/oven-and-thermostat-6.example")}
+          />
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            Getting Warm?
           </Heading>
           <Appear>
-            <BlockQuote textColor="primary" textSize={74}>
-              <Quote>
-                "a data structure that always preserves the previous version of
-                itself when it is modified"
-              </Quote>
-              <Cite>Wikipedia</Cite>
-            </BlockQuote>
+            <Image
+              src={"https://media.giphy.com/media/LRVnPYqM8DLag/giphy.gif"}
+              margin="0px auto 40px"
+              height="500px"
+            />
           </Appear>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            Heat up the Oven some more...
+          </Heading>
+          <CodePane
+            lang="jsx"
+            textSize="22px"
+            source={require("raw-loader!../assets/code/oven-and-thermostat-7.example")}
+          />
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            And then...
+          </Heading>
+          <Appear>
+            <Image
+              src={"https://media.giphy.com/media/NmrqUdwGXPOog/giphy.gif"}
+              margin="0px auto 40px"
+              height="500px"
+            />
+          </Appear>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            Bring out the popcorn
+          </Heading>
+          <Image
+            src={"https://media.giphy.com/media/3oeSAQoA5PLG4jLTos/giphy.gif"}
+            margin="0px auto 40px"
+            height="500px"
+          />
+          <Appear>
+            <Text>https://jsbin.com/tinuge</Text>
+          </Appear>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            Remember our lamp?
+          </Heading>
+          <CodePane
+            textSize="20"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/fp-lamp-3.example")}
+          />
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={5} fit caps lineHeight={1} textColor="secondary">
@@ -696,6 +969,20 @@ export default class Presentation extends React.Component {
             <ListItem>You don't overwrite the old state</ListItem>
           </Appear>
         </Slide>
+        <Slide transition={["zoom"]} bgColor="secondary">
+          <Heading size={3} fit lineHeight={1} textColor="quartenary">
+            What is an Immutable data structure?
+          </Heading>
+          <Appear>
+            <BlockQuote textColor="primary" textSize={74}>
+              <Quote>
+                "a data structure that always preserves the previous version of
+                itself when it is modified"
+              </Quote>
+              <Cite>Wikipedia</Cite>
+            </BlockQuote>
+          </Appear>
+        </Slide>
 
         <Slide
           transition={["fade"]}
@@ -724,6 +1011,7 @@ export default class Presentation extends React.Component {
             E.g. Convert a Unix timestamp to time in JavaScript
           </Heading>
           <CodePane
+            textSize="20px"
             lang="jsx"
             source={require("raw-loader!../assets/code/so-timestamp-fn-example")}
           />
@@ -761,6 +1049,28 @@ export default class Presentation extends React.Component {
             src={"https://media.giphy.com/media/l0HlxxsW8Asm69uhi/giphy.gif"}
             margin="0px auto 40px"
             height="500px"
+          />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading margin="0px auto 40px" size={5} textColor="secondary">
+            Instead of writing code like this...
+          </Heading>
+          <CodePane
+            textSize="20"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/pipes-1.example")}
+          />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading margin="0px auto 40px" size={5} textColor="secondary">
+            We write code like this:
+          </Heading>
+          <CodePane
+            textSize="22"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/pipes-2.example")}
           />
         </Slide>
 

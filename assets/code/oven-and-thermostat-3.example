@@ -1,0 +1,19 @@
+const tempControl = new Temperature(34);
+
+class Oven {
+  constructor(tempControl) {
+    this.tempControl = tempControl;
+  }
+  
+  coolDown(val) {
+    this.tempControl.turnDown(val)
+  }
+  
+  heatUp(val) {
+    this.tempControl.turnUp(val)
+  }
+  
+   get temp() {
+    return this.tempControl.temp
+  }
+}
