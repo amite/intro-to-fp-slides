@@ -89,7 +89,7 @@ export default class Presentation extends React.Component {
         <Slide
           transition={["fade"]}
           bgImage={"https://source.unsplash.com/5qu_01uVW7k/1200x900"}
-          bgDarken={0.5}
+          bgDarken={0.7}
           textColor="tertiary"
         >
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit caps>
@@ -101,6 +101,110 @@ export default class Presentation extends React.Component {
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit caps>
             Filter Kapee Edition
           </Text>
+        </Slide>
+        <Slide
+          transition={["fade"]}
+          bgImage={
+            "http://salesstrategypitstop.theasggroup.com/files/2014/12/mental-models-and-the-pitstop.png"
+          }
+          textColor="tertiary"
+        />
+        <Slide
+          transition={["fade"]}
+          bgImage={"https://source.unsplash.com/r4V8xg21vek/1200x900"}
+          textColor="tertiary"
+        />
+        <Slide
+          transition={["fade"]}
+          bgImage={"https://source.unsplash.com/3Kv48NS4WUU/1200x900"}
+          textColor="tertiary"
+        />
+        <Slide
+          transition={["fade"]}
+          bgImage={"https://source.unsplash.com/Ai7sV3SSMIQ/1200x900"}
+          bgDarken={0.7}
+          textColor="tertiary"
+        >
+          <Text margin="10px 0 0" textColor="tertiary" size={1} fit caps>
+            A little bit of
+          </Text>
+          <Heading size={3} textColor="primary" caps fit>
+            History
+          </Heading>
+        </Slide>
+        <Slide
+          transition={["fade"]}
+          bgImage={"https://source.unsplash.com/Ai7sV3SSMIQ/1200x900"}
+          bgDarken={0.7}
+          textColor="tertiary"
+        >
+          <Image
+            src={"http://www.learn-math.info/history/photos/Church.jpeg"}
+            margin="0px auto 40px"
+            height="500px"
+          />
+          <Image
+            src={
+              "https://www.biography.com/.image/t_share/MTE5NDg0MDU1MTUzMTE2Njg3/alan-turing-9512017-1-402.jpg"
+            }
+            margin="0px auto 40px"
+            height="500px"
+          />
+          <Text margin="10px 0 0" textColor="primary" size={1} fit caps>
+            Alonzo Church | Alan Turing
+          </Text>
+        </Slide>
+        <Slide
+          transition={["fade"]}
+          bgImage={"https://source.unsplash.com/Ai7sV3SSMIQ/1200x900"}
+          bgDarken={0.7}
+          textColor="tertiary"
+        >
+          <Image
+            src={"http://www.learn-math.info/history/photos/Church.jpeg"}
+            margin="0px auto 40px"
+            height="500px"
+          />
+          <Image
+            src={
+              "https://www.biography.com/.image/t_share/MTE5NDg0MDU1MTUzMTE2Njg3/alan-turing-9512017-1-402.jpg"
+            }
+            margin="0px auto 40px"
+            height="500px"
+          />
+          <Text margin="10px 0 0" textColor="primary" size={1}>
+            Execution with data (OOP) vs Computation as the evaluation of
+            mathematical functions (FP)
+          </Text>
+        </Slide>
+        <Slide
+          transition={["fade"]}
+          bgImage={"https://source.unsplash.com/5qu_01uVW7k/1200x900"}
+          bgDarken={0.5}
+          textColor="tertiary"
+        >
+          <Heading margin="0px 0 10px" size={1} textColor="tertiary" caps fit>
+            What that looks like:
+          </Heading>
+          <Appear>
+            <CodePane
+              textSize="22px"
+              lang="jsx"
+              source={require("raw-loader!../assets/code/oop-execution.example")}
+            />
+          </Appear>
+          <Appear>
+            <Text margin="10px 0 0" textColor="tertiary" size={6}>
+              Vs
+            </Text>
+          </Appear>
+          <Appear>
+            <CodePane
+              textSize="22px"
+              lang="jsx"
+              source={require("raw-loader!../assets/code/fp-evaluate.example")}
+            />
+          </Appear>
         </Slide>
         <Slide
           transition={["fade"]}
@@ -136,6 +240,9 @@ export default class Presentation extends React.Component {
             </Appear>
             <Appear>
               <ListItem>Svelte</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Angular (?) (RxJs)</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -225,6 +332,17 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
+        <Slide transition={["zoom"]} bgColor="secondary">
+          <BlockQuote textColor="primary">
+            <Quote textSize="45">
+              "The most depressing thing about life as a programmer, I think, is
+              if you’re faced with a chunk of code that either someone else
+              wrote or, worse still, you wrote yourself but no longer dare to
+              modify. That’s depressing."
+            </Quote>
+            <Cite>Simon Peyton Jones</Cite>
+          </BlockQuote>
+        </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
             What we will be covering...
@@ -246,30 +364,6 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-            Why do these things matter?
-          </Heading>
-          <Appear>
-            <Text margin="10px 0 0" textColor="quartenary" size={3} fit>
-              How will they really help?
-            </Text>
-          </Appear>
-          <List>
-            <Appear>
-              <ListItem>Recognize the evils of (shared) state</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Give you ways of safely control state</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Migrate your mindset from OOP to FP</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Adapt practical functional habits</ListItem>
-            </Appear>
-          </List>
-        </Slide>
         <Slide transition={["zoom"]} bgColor="secondary">
           <Heading
             size={5}
@@ -279,7 +373,7 @@ export default class Presentation extends React.Component {
             textColor="primary"
             margin="30px auto"
           >
-            Back to Basics: You know Objects
+            You know Objects
           </Heading>
           <Appear>
             <Heading
@@ -314,6 +408,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <Appear>
             <CodePane
+              textSize="22"
               lang="jsx"
               source={require("raw-loader!../assets/code/basic-object.example")}
             />
@@ -331,6 +426,7 @@ export default class Presentation extends React.Component {
             Let's give the lamp some state
           </Heading>
           <CodePane
+            textSize="22"
             lang="jsx"
             source={require("raw-loader!../assets/code/basic-object-2.example")}
           />
@@ -347,6 +443,7 @@ export default class Presentation extends React.Component {
             Let's add behavior
           </Heading>
           <CodePane
+            textSize="22"
             lang="jsx"
             source={require("raw-loader!../assets/code/basic-object-3.example")}
           />
@@ -363,6 +460,7 @@ export default class Presentation extends React.Component {
             Let's switch it on
           </Heading>
           <CodePane
+            textSize="22"
             lang="jsx"
             source={require("raw-loader!../assets/code/toggle-lamp.example")}
           />
@@ -378,11 +476,15 @@ export default class Presentation extends React.Component {
           >
             Now Let's see the FP version
           </Heading>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/code/fp-lamp-prelude.example")}
-          />
+          <Appear>
+            <CodePane
+              textSize="25"
+              lang="jsx"
+              source={require("raw-loader!../assets/code/fp-lamp-2.example")}
+            />
+          </Appear>
         </Slide>
+
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading
             size={5}
@@ -392,28 +494,15 @@ export default class Presentation extends React.Component {
             textColor="secondary"
             margin="30px auto"
           >
-            Add some properties
+            Where's the Lamp? 🤔
           </Heading>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/code/fp-lamp.example")}
-          />
-        </Slide>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading
-            size={5}
-            fit
-            caps
-            lineHeight={1}
-            textColor="secondary"
-            margin="30px auto"
-          >
-            Now Let's process it!
-          </Heading>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/code/fp-lamp-2.example")}
-          />
+          <Appear>
+            <CodePane
+              textSize="22"
+              lang="jsx"
+              source={require("raw-loader!../assets/code/fp-lamp.example")}
+            />
+          </Appear>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading
@@ -424,9 +513,10 @@ export default class Presentation extends React.Component {
             textColor="tertiary"
             margin="30px auto"
           >
-            ...And Toggle It On!
+            ...Toggle It On!
           </Heading>
           <CodePane
+            textSize="23"
             lang="jsx"
             source={require("raw-loader!../assets/code/fp-lamp-4.example")}
           />
@@ -1033,6 +1123,16 @@ export default class Presentation extends React.Component {
             </Heading>
           </Appear>
         </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={5} textColor="secondary" caps>
+            That means in functional programming
+          </Heading>
+          <Appear>
+            <Heading size={1} textColor="tertiary" caps>
+              "Code is just Data"
+            </Heading>
+          </Appear>
+        </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="secondary">
@@ -1055,6 +1155,113 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading margin="0px auto 40px" size={2} textColor="secondary">
+            Challenge ☕️
+          </Heading>
+          <CodePane
+            textSize="22px"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/map-1.example")}
+          />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading margin="0px auto 40px" size={2} textColor="secondary" fit>
+            The imperative way
+          </Heading>
+          <CodePane
+            textSize="18px"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/map-1-imperative.example")}
+          />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading margin="0px auto 40px" size={3} textColor="secondary">
+            Using forEach
+          </Heading>
+          <CodePane
+            textSize="18px"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/map-2-imperative.example")}
+          />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading margin="0px auto 40px" size={2} textColor="secondary" fit>
+            The declarative way
+          </Heading>
+          <CodePane
+            textSize="22px"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/map-1-functional.example")}
+          />
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            What does map do?
+          </Heading>
+          <Appear>
+            <ListItem>Works over an array</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Applies a function to each element</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Creates a new array</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Does not mutate the array passed in</ListItem>
+          </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading margin="0px auto 40px" size={2} textColor="secondary" fit>
+            Simple Double Function
+          </Heading>
+          <CodePane
+            textSize="22px"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/simple.map-double.example")}
+          />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading margin="0px auto 40px" size={2} textColor="secondary" fit>
+            How Map Works
+          </Heading>
+          <CodePane
+            textSize="22px"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/array-implementation.example")}
+          />
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            When should I use Map?
+          </Heading>
+          <Appear>
+            <ListItem>Want to work with a collection</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Transform values in a collection</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>return a new collection</ListItem>
+          </Appear>
+        </Slide>
+
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading margin="0px auto 40px" size={2} textColor="secondary">
             Challenge
@@ -1085,35 +1292,151 @@ export default class Presentation extends React.Component {
             source={require("raw-loader!../assets/code/filter-1-functional.example")}
           />
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading margin="0px auto 40px" size={2} textColor="secondary">
-            Challenge ☕️
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            What does filter do?
           </Heading>
-          <CodePane
-            textSize="22px"
-            lang="jsx"
-            source={require("raw-loader!../assets/code/map-1.example")}
-          />
+          <Appear>
+            <ListItem>Works over an array</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Works on one item at a time</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Applies a predicate function to each element</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Creates a new array</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Does not mutate the array passed in</ListItem>
+          </Appear>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading margin="0px auto 40px" size={2} textColor="secondary" fit>
-            The imperative way
+            Find difficult tasks
           </Heading>
           <CodePane
             textSize="18px"
             lang="jsx"
-            source={require("raw-loader!../assets/code/map-1-imperative.example")}
+            source={require("raw-loader!../assets/code/filter-tasks.example")}
           />
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading margin="0px auto 40px" size={2} textColor="secondary" fit>
-            The declarative way
+            How Filter Works
           </Heading>
           <CodePane
             textSize="22px"
             lang="jsx"
-            source={require("raw-loader!../assets/code/map-1-functional.example")}
+            source={require("raw-loader!../assets/code/simple-filter-implementation.example")}
           />
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            When should I use Filter?
+          </Heading>
+          <Appear>
+            <ListItem>Want to work with a collection</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Include or exclude items in a collection</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>return a new collection</ListItem>
+          </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading margin="0px auto 40px" size={2} textColor="secondary" fit>
+            Challenge
+          </Heading>
+          <CodePane
+            textSize="22px"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/reduce-1.example")}
+          />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading margin="0px auto 40px" size={2} textColor="secondary" fit>
+            Imperative with forEach
+          </Heading>
+          <CodePane
+            textSize="22px"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/reduce-1-imperative.example")}
+          />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading margin="0px auto 40px" size={2} textColor="secondary" fit>
+            Functional solution with Reduce
+          </Heading>
+          <CodePane
+            textSize="22px"
+            lang="jsx"
+            source={require("raw-loader!../assets/code/reduce-1-functional.example")}
+          />
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            What does reduce do?
+          </Heading>
+          <Appear>
+            <ListItem>Works over an array</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Works on one item at a time</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Returns an accumulated output</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Creates a new array</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Does not mutate the array passed in</ListItem>
+          </Appear>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            When should I use Reduce?
+          </Heading>
+          <Appear>
+            <ListItem>Want to work with a collection</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Boil a collection down to a single value</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>return a new single value</ListItem>
+          </Appear>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">

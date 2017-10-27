@@ -1,0 +1,20 @@
+var tasks = [
+  {
+    'name'     : 'Make awesome presentation',
+    'duration' : 120
+  },
+    'name'     : 'Work out',
+    'duration' : 60
+  },
+  {
+    'name'     : 'Procrastinate on Duolingo',
+    'duration' : 240
+  }
+]
+
+const difficult_tasks = tasks.filter(function (task) {
+    return task.duration >= 120;
+})
+
+// Using ES6
+var difficult_tasks = tasks.filter((task) => task.duration >= 120 );

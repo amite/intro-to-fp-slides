@@ -1,13 +1,13 @@
 const getStockSymbols = (stocks) => {
   const symbols = [];
  
-  for (let i = 0; i < stocks.length; i++) {
-    symbols.push(stocks[i].symbol);
-  }
+  stocks.forEach(function(stock) {
+    symbols.push(stock.symbol)
+  })
  
   return symbols;
 }
 
 getStockSymbols(stocks) // ["XFX", "TNZ", "JXJ"]
 
-// https://jsbin.com/wucixew/
+// https://jsbin.com/gipilur/

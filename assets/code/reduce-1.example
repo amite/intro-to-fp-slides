@@ -4,6 +4,5 @@ const stocks = [
   { symbol: "JXJ", price: 120.22, volume: 5323 },
 ]
 
-// Get stock symbols
-// example via https://egghead.io/lessons/javascript-the-array-map-method
-// https://jsbin.com/wucixew/
+// Get the total volume of sales
+

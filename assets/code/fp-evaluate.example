@@ -1,0 +1,7 @@
+(weight => 
+  height => 
+    weight / 
+     (height * height * 0.01)
+)(70)(177) // evaluation of a lambda expression
+
+// via @staltz https://www.youtube.com/watch?v=wdP-Sl-im70&t=1257s

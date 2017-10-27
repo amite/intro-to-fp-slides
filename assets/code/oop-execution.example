@@ -1,0 +1,7 @@
+var weight = 70
+var height = 177
+var bmi = weight
+bmi /= weight
+bmi /= height
+bmi /= 0.01
+bmi /= 0.01 // code execution as series of steps
