@@ -1,5 +1,5 @@
-# Intro to GraphQL
+# Intro to Functional Programming
 
-## A talk delivered at Mumbai Women Coders conference
+## A talk delivered at Google Developer Group (Mumbai)
 
-![GraphQL Faker logo](./screenshots/mwc-9-amite.jpg)
+![GraphQL Faker logo](./screenshots/gdg-fp-presentation.jpg)
