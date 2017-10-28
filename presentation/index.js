@@ -49,18 +49,8 @@ const images = {
   kat: require("../assets/kat.png"),
   logo: require("../assets/graphql_logo.png"),
   markdown: require("../assets/markdown.png"),
-  full_profile: require("../assets/full_user_profile.png"),
   why: require("../assets/why.gif"),
-  user_widget: require("../assets/user_widget.jpg"),
-  annoyed: require("../assets/annoyed.gif"),
-  widget_query: require("../assets/widget_query.png"),
-  graphql_architechture: require("../assets/graphql_architechture.png"),
-  graphql_vs_rest: require("../assets/graphql_vs_rest.png"),
-  graphql_result: require("../assets/graphql_result.png"),
-  graphql_result_2: require("../assets/graphql_result_2.png"),
-  live: require("../assets/live.gif"),
-  dance: require("../assets/dance.gif"),
-  rest: require("../assets/rest.png")
+  me: require("../assets/me.jpg")
 };
 
 preloader(images);
@@ -308,7 +298,21 @@ export default class Presentation extends React.Component {
                 because of a stronger understanding of FP
               </ListItem>
             </Appear>
+            <Appear>
+              <ListItem>I can write null free code! 🎉</ListItem>
+            </Appear>
           </List>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="secondary">
+          <BlockQuote textColor="primary">
+            <Quote textSize="45">
+              "The most depressing thing about life as a programmer, I think, is
+              if you’re faced with a chunk of code that either someone else
+              wrote or, worse still, you wrote yourself but no longer dare to
+              modify. That’s depressing."
+            </Quote>
+            <Cite>Simon Peyton Jones</Cite>
+          </BlockQuote>
         </Slide>
         <Slide
           transition={["fade"]}
@@ -436,17 +440,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="secondary">
-          <BlockQuote textColor="primary">
-            <Quote textSize="45">
-              "The most depressing thing about life as a programmer, I think, is
-              if you’re faced with a chunk of code that either someone else
-              wrote or, worse still, you wrote yourself but no longer dare to
-              modify. That’s depressing."
-            </Quote>
-            <Cite>Simon Peyton Jones</Cite>
-          </BlockQuote>
-        </Slide>
+
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
             What we will be covering...
@@ -912,7 +906,7 @@ export default class Presentation extends React.Component {
           <Image
             src={"https://media.giphy.com/media/3oeSAQoA5PLG4jLTos/giphy.gif"}
             margin="0px auto 40px"
-            height="500px"
+            height="350px"
           />
           <Appear>
             <Text>https://jsbin.com/tinuge</Text>
@@ -1302,11 +1296,9 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Image
-            src={
-              "http://blog.js-republic.com/wp-content/uploads/2016/11/logo-redux.png"
-            }
-            margin="0px auto 20px"
-            height="200px"
+            src={images.why.replace("/", "")}
+            margin="0px auto 40px"
+            height="550px"
           />
           <Heading margin="0px auto 40px" size={5} textColor="secondary">
             Redux reducers must be pure functions...
@@ -1747,6 +1739,56 @@ export default class Presentation extends React.Component {
           <Appear>
             <ListItem>return a new single value</ListItem>
           </Appear>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={5}
+            fit
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+            margin="30px auto"
+          >
+            What's ahead?
+          </Heading>
+          <Appear>
+            <ListItem>Currying & Partial Application</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Types</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Algebraic Data Types</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Monads</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Functors</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Category Theory</ListItem>
+          </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1} textColor="tertiary" margin="0px auto 40px" caps>
+            Who am I?
+          </Heading>
+          <Image
+            src={images.me.replace("/", "")}
+            margin="0px auto 40px"
+            height="350px"
+          />
+
+          <Heading size={3} textColor="quartenary">
+            Amit Erandole
+          </Heading>
+          <Heading size={4} textColor="primary" fit>
+            Writer, Designer and Full Stack Developer
+          </Heading>
+          <Heading size={4} textColor="quartenary" fit caps>
+            React / Redux Trainer and Consultant | @amit_tushar
+          </Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
