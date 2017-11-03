@@ -92,6 +92,26 @@ export default class Presentation extends React.Component {
             Filter Kapee Edition
           </Text>
         </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1} textColor="tertiary" margin="0px auto 40px" caps>
+            Who am I?
+          </Heading>
+          <Image
+            src={images.me.replace("/", "")}
+            margin="0px auto 40px"
+            height="350px"
+          />
+
+          <Heading size={3} textColor="quartenary">
+            Amit Erandole
+          </Heading>
+          <Heading size={4} textColor="primary" fit>
+            Writer, Designer and Full Stack Developer
+          </Heading>
+          <Heading size={4} textColor="quartenary" fit caps>
+            React / Redux Trainer and Consultant | @amit_tushar
+          </Heading>
+        </Slide>
         <Slide
           transition={["fade"]}
           bgImage={
@@ -196,14 +216,20 @@ export default class Presentation extends React.Component {
             />
           </Appear>
         </Slide>
+        <Slide transition={["fade"]} bgColor="quartenary" textColor="tertiary">
+          <Image src="https://maxcdn.icons8.com/windows10/PNG/512/Alphabet/lambda-512.png" />
+        </Slide>
         <Slide
           transition={["fade"]}
           bgImage={"https://source.unsplash.com/5qu_01uVW7k/1200x900"}
           bgDarken={0.5}
           textColor="tertiary"
         >
-          <Heading size={1} textColor="primary" caps>
-            What problems does Functional Programming (FP) solve?
+          <Heading size={1} textColor="tertiary" caps fit>
+            What problems?
+          </Heading>
+          <Heading size={3} textColor="primary" caps fit>
+            does Functional Programming (FP) solve?
           </Heading>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
@@ -255,18 +281,6 @@ export default class Presentation extends React.Component {
             </Appear>
             <Appear>
               <ListItem>
-                reduces complexity in my software. Let’s me write succinct and
-                clear code
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                allows me to scale complex requirements without having to write
-                redundant abstractions or spaghetti code.{" "}
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
                 Code runs really well on multi-core CPU's and GPU's
               </ListItem>
             </Appear>
@@ -286,12 +300,15 @@ export default class Presentation extends React.Component {
                 I have to write
               </ListItem>
             </Appear>
-            <Appear>
-              <ListItem>
-                I understand the React and redux ecosystem much better from an
-                FP perspective
-              </ListItem>
-            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <List textAlign="center">
+            <ListItem>
+              I understand the React and redux ecosystem much better from an FP
+              perspective
+            </ListItem>
+
             <Appear>
               <ListItem>
                 I can use more powerful component patterns in React and redux
@@ -1296,9 +1313,11 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Image
-            src={images.why.replace("/", "")}
-            margin="0px auto 40px"
-            height="550px"
+            src={
+              "http://blog.js-republic.com/wp-content/uploads/2016/11/logo-redux.png"
+            }
+            margin="0px auto 20px"
+            height="200px"
           />
           <Heading margin="0px auto 40px" size={5} textColor="secondary">
             Redux reducers must be pure functions...
